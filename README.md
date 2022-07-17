@@ -12,7 +12,7 @@ DriveApp.File#makeCopy()で同名のファイル/フォルダが存在してし�
 新しいフォルダー、または既に存在する同名のフォルダーを取得して返します。
 |引数名|型|説明|
 |----|----|----|
-|parentFolder|DriveApp.Folder|親フォルダ|
+|parentFolder|DriveApp.Folder|親フォルダ(rootに作成する場合はnull)|
 |folderName|string|作成するフォルダの名前|
 
 
