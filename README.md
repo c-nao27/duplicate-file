@@ -8,7 +8,7 @@ DriveApp.File#makeCopy()で同名のファイル/フォルダが存在してし�
 [Source Code](https://script.google.com/d/1-_N4XmFTnp9TIjQSlKF_8Ccb6DPia92sNq6waYFLTtROGg5cCbTxTYQ-/edit?usp=sharing)  
 
 ### duplicateFile()
-`
+~~~javascript
 function duplicateFile(folder, fileId, fileName) {
   const reg = new RegExp(`^${fileName}.*`);
   const files = folder.getFiles();
@@ -29,9 +29,11 @@ function duplicateFile(folder, fileId, fileName) {
   }
   return file;
 }
-`
+~~~
+
+
 ### createFolder()
-`
+~~~javascript
 function createFolder(parentFolder, folderName) {
   if (parentFolder == null){
     parentFolder = DriveApp.getRootFolder();
@@ -48,4 +50,4 @@ function createFolder(parentFolder, folderName) {
   }
   return folder;
 }
-`
+~~~
