@@ -1,7 +1,6 @@
 # About
 DriveApp.File#makeCopy()で同名のファイル/フォルダが存在してしまう仕様のアンチGASライブラリ  
 https://script.google.com/d/1-_N4XmFTnp9TIjQSlKF_8Ccb6DPia92sNq6waYFLTtROGg5cCbTxTYQ-/edit?usp=sharing
-https://script.google.com/macros/library/d/1-_N4XmFTnp9TIjQSlKF_8Ccb6DPia92sNq6waYFLTtROGg5cCbTxTYQ-/1
 
 
 ### スクリプトID
