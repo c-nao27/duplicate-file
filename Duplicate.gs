@@ -23,12 +23,15 @@ function createFolder(parentFolder, folderName) {
 
 /**
  * Get file to copy. if duplicate file name, add a number to the end.
- * @param {DriveApp.Folder} folder Folder to create files
+ * @param {DriveApp.Folder} folder Folder to create files / null -> root
  * @param {string} fileId File ID to create
  * @param {string} fileName File name to create
  * @return {DriveApp.File} Created file
  */
 function duplicateFile(folder, fileId, fileName) {
+  if (folder == null){
+    folder = DriveApp.getRootFolder();
+  }
   const reg = new RegExp(`^${fileName}.*`);
   const files = folder.getFiles();
 
