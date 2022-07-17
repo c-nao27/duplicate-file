@@ -1,7 +1,7 @@
 # About
 DriveApp.File#makeCopy()で同名のファイル/フォルダが存在してしまう仕様のアンチGASライブラリ  
 [Source Code](https://script.google.com/d/1-_N4XmFTnp9TIjQSlKF_8Ccb6DPia92sNq6waYFLTtROGg5cCbTxTYQ-/edit?usp=sharing)  
-[Library Document](https://script.google.com/macros/library/d/1-_N4XmFTnp9TIjQSlKF_8Ccb6DPia92sNq6waYFLTtROGg5cCbTxTYQ-/1)
+[Library Document](https://script.google.com/macros/library/d/1-_N4XmFTnp9TIjQSlKF_8Ccb6DPia92sNq6waYFLTtROGg5cCbTxTYQ-/2)
 
 
 ### スクリプトID
@@ -41,12 +41,15 @@ function createFolder(parentFolder, folderName) {
 ファイル名が重複する場合は末尾に数字を付加して返します。
 |引数名|型|説明|
 |----|----|----|
-|folder|DriveApp.Folder|ファイルを作成するフォルダ|
+|folder|DriveApp.Folder|ファイルを作成するフォルダ(rootに作成する場合はnull)|
 |fileId|string|作成するファイルのID|
 |fileName|string|作成するファイルの名前|
 
 ~~~javascript
 function duplicateFile(folder, fileId, fileName) {
+  if (folder == null){
+    folder = DriveApp.getRootFolder();
+  }
   const reg = new RegExp(`^${fileName}.*`);
   const files = folder.getFiles();
 
